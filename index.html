@@ -17,7 +17,7 @@
 </div></section><section class="wrap" id="realities"><div class="eyebrow">04 / The imagined worlds</div><h2>Imagined Realities</h2><p class="intro">The first entries in our visual archive. Select a world to enter its record.</p><div class="worlds" id="worldGrid"></div></section>
 <section class="wrap" id="architect"><div class="eyebrow">05 / The origin of the vision</div><h2>The Observatory</h2><div class="research"><img src="assets/dream.webp" alt="Dreamlike green valley beneath towering pastel clouds" loading="lazy"><div><h3>A note from The Architect</h3><p>Every discovery begins with a question. Every imagined world begins with the possibility that reality could be different.</p><p>The Aetherium is an evolving project dedicated to learning what can be known, challenging what remains uncertain, and giving form to what has never existed.</p><p>In time, The Collective will invite thoughtful contributions. Until then, this first release establishes the foundation.</p><span class="tag">The Collective · planned</span><span class="tag">Public research contributions · planned</span></div></div></section></main>
 <footer class="footer"><div class="brand">THE <span>AETHERIUM</span></div><p>An archive of impossible realities · Created by The Architect</p><p>Version 0.3 · The Knowledge Engine</p></footer>
-<button class="curator-launch" id="curatorLaunch" aria-controls="curator" aria-expanded="false">✦ Ask The Curator</button><aside class="curator" id="curator" aria-label="The Curator research guide"><div class="curator-head"><div><strong>✦ The Curator</strong><div style="font-size:11px;color:var(--muted)">Compendium research guide · preview</div></div><button id="curatorClose" aria-label="Close The Curator">×</button></div><div class="curator-log" id="curatorLog" role="log" aria-live="polite"><div class="bubble bot">Welcome to The Aetherium. I can guide you through a few curated research questions and source links. This preview is not yet a generative AI chatbot.</div><div class="prompt-row" id="curatorPrompts"><button data-question="What is a theory of everything?">Theory of everything</button><button data-question="How do quantum mechanics and relativity differ?">Quantum vs relativity</button><button data-question="What is emergence?">Emergence</button></div></div><form class="curator-form" id="curatorForm"><input id="curatorInput" aria-label="Ask a research question" placeholder="Ask about the Compendium…" maxlength="400" required><button type="submit">Ask</button></form><div class="curator-note">Curated answers only. No account, API key, or personal data required. For full AI conversation, a secure server is needed.</div></aside>
+<button class="curator-launch" id="curatorLaunch" aria-controls="curator" aria-expanded="false">✦ Ask The Curator</button><aside class="curator" id="curator" aria-label="The Curator research guide"><div class="curator-head"><div><strong>✦ The Curator</strong><div style="font-size:11px;color:var(--muted)">AI research guide · beta</div></div><button id="curatorClose" aria-label="Close The Curator">×</button></div><div class="curator-log" id="curatorLog" role="log" aria-live="polite"><div class="bubble bot">Welcome to The Aetherium. I am The Curator, your AI research guide. What would you like to explore?</div><div class="prompt-row" id="curatorPrompts"><button data-question="What is a theory of everything?">Theory of everything</button><button data-question="How do quantum mechanics and relativity differ?">Quantum vs relativity</button><button data-question="What is emergence?">Emergence</button></div></div><form class="curator-form" id="curatorForm"><input id="curatorInput" aria-label="Ask a research question" placeholder="Ask about the Compendium…" maxlength="4000" required><button type="submit">Ask</button></form><div class="curator-note">AI-generated answers can be inaccurate. Verify important claims. Please avoid sharing sensitive personal information.</div></aside>
 <div class="modal" id="worldModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="close" id="closeModal" aria-label="Close world record">✕ Close</button><div class="modal-body"><img id="modalImg" src="assets/city.webp" alt=""><div class="modal-content"><div class="eyebrow" id="modalNumber"></div><h2 id="modalTitle"></h2><p id="modalDescription"></p><div class="tag">Imagined reality · Fictional</div><p id="modalLink"></p></div></div></div>
 <script>
 const topics=[['Physics','Matter, motion, energy, and fundamental interactions.','Explore: relativity, quantum theory, thermodynamics.'],['Mathematics','Patterns, structure, logic, and the language of models.','Explore: geometry, calculus, probability.'],['Cosmology','The origin, structure, and evolution of the universe.','Explore: cosmic expansion, dark matter, cosmic history.'],['Life & Complexity','From chemistry to evolution and emergent systems.','Explore: evolution, networks, self-organization.'],['Mind & Consciousness','How experience, cognition, and intelligence arise.','Explore: neuroscience, perception, philosophy of mind.'],['Philosophy of Science','What counts as evidence, explanation, and understanding.','Explore: causality, falsifiability, uncertainty.']];
@@ -26,5 +26,69 @@ const connections={'Physics':'Physics connects mathematical descriptions to cosm
 const worlds=[['001',"Tomorrow’s Yesterday",'A future that time forgot.','A sunlit utopia of sculptural towers, tranquil plazas, and architecture designed for a tomorrow that never arrived.','city','Connects to: design history, urban planning, speculative futures.'],['002','The Monorail Beyond the Horizon','A journey without a destination.','A silver train drifts above an ocean of clouds, following a route through the impossible.','rail','Connects to: transportation, engineering, atmospheric science.'],['003','The Forgotten Space Colony','The last light of an abandoned tomorrow.','An orbital sanctuary of warm amber interiors, botanical gardens, and windows opening onto an immense blue world.','colony','Connects to: orbital mechanics, habitat design, planetary science.'],['004','The Oceanarium of Tomorrow','A sanctuary beneath an endless ocean.','A quiet underwater observatory where luminous marine life moves beyond panoramic windows.','ocean','Connects to: marine biology, ocean pressure, underwater architecture.']];
 const wg=document.getElementById('worldGrid');worlds.forEach((w,i)=>{let b=document.createElement('button');b.className='world';b.innerHTML=`<img src="assets/${w[4]}.webp" alt="${w[1]} visual artwork" loading="lazy"><div class="world-info"><div class="eyebrow">Reality ${w[0]}</div><h3>${w[1]}</h3><p>${w[2]}</p></div>`;b.onclick=()=>openWorld(i);wg.appendChild(b)});const modal=document.getElementById('worldModal');let lastFocus=null;function openWorld(i){const w=worlds[i];lastFocus=document.activeElement;document.getElementById('modalImg').src=`assets/${w[4]}.webp`;document.getElementById('modalImg').alt=w[1]+' artwork';document.getElementById('modalNumber').textContent='Compendium / Reality '+w[0];document.getElementById('modalTitle').textContent=w[1];document.getElementById('modalDescription').textContent=w[3];document.getElementById('modalLink').textContent=w[5];modal.classList.add('open');document.body.style.overflow='hidden';document.getElementById('closeModal').focus()}function closeWorld(){modal.classList.remove('open');document.body.style.overflow='';lastFocus?.focus()}document.getElementById('closeModal').onclick=closeWorld;modal.addEventListener('click',e=>{if(e.target===modal)closeWorld()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeWorld();if(e.key==='Tab'&&modal.classList.contains('open')){e.preventDefault();document.getElementById('closeModal').focus()}});
 </script><script>
-(()=>{const launch=document.getElementById('curatorLaunch'),panel=document.getElementById('curator'),close=document.getElementById('curatorClose'),log=document.getElementById('curatorLog'),form=document.getElementById('curatorForm'),input=document.getElementById('curatorInput');function toggle(v){panel.classList.toggle('open',v);launch.setAttribute('aria-expanded',String(v));if(v)input.focus();else launch.focus()}launch.onclick=()=>toggle(!panel.classList.contains('open'));close.onclick=()=>toggle(false);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.contains('open'))toggle(false)});const answers=[{keys:['everything','unification','unify','unified'],answer:'A “theory of everything” usually means a consistent framework that unifies fundamental interactions, including gravity, and makes testable predictions. No experimentally confirmed complete theory currently exists. Our Laboratory treats this as an open research goal.',sources:[['CERN · Standard Model','https://home.cern/science/physics/standard-model']]},{keys:['quantum','relativity','gravity','spacetime'],answer:'Quantum mechanics models microscopic systems using probability amplitudes; general relativity describes gravity as spacetime geometry. Both are strongly supported in their domains, but combining them consistently in extreme conditions remains a major challenge.',sources:[['Stanford Encyclopedia · Quantum Mechanics','https://plato.stanford.edu/entries/qm/'],['NASA · Gravitational Waves','https://science.nasa.gov/universe/gravitational-waves/']]},{keys:['emergence','complexity','emergent','evolution'],answer:'Emergence refers to collective behavior arising from interactions among parts. It appears in many systems, from fluid behavior to biological organization. Not every complex pattern is inevitable, and explanations depend on the system and scale.',sources:[['Stanford Encyclopedia · Emergent Properties','https://plato.stanford.edu/entries/properties-emergent/']]},{keys:['standard model','particle','force'],answer:'The Standard Model is the quantum framework describing known elementary particles and the electromagnetic, weak, and strong interactions. It does not include gravity as a quantum interaction.',sources:[['CERN · Standard Model','https://home.cern/science/physics/standard-model']]}];function bubble(t,kind){const d=document.createElement('div');d.className='bubble '+kind;d.textContent=t;log.appendChild(d);log.scrollTop=log.scrollHeight;return d}function ask(q){q=q.trim();if(!q)return;bubble(q,'user');const match=answers.find(a=>a.keys.some(k=>q.toLowerCase().includes(k)));if(!match){bubble('I do not have a verified curated answer for that question yet. Try asking about quantum mechanics, relativity, emergence, the Standard Model, or the theory of everything. A future release will add a real AI research service with source-grounded responses.','bot');return}const b=bubble(match.answer,'bot');match.sources.forEach(([name,url])=>{const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.className='source-link';a.textContent='Source: '+name+' ↗';b.appendChild(a)})}form.addEventListener('submit',e=>{e.preventDefault();ask(input.value);input.value=''});document.querySelectorAll('[data-question]').forEach(b=>b.addEventListener('click',()=>ask(b.dataset.question)))})();
+(()=>{
+  const API='https://aetheriumcurator.lhhornet74.workers.dev/chat';
+  const launch=document.getElementById('curatorLaunch');
+  const panel=document.getElementById('curator');
+  const close=document.getElementById('curatorClose');
+  const log=document.getElementById('curatorLog');
+  const form=document.getElementById('curatorForm');
+  const input=document.getElementById('curatorInput');
+  const submit=form.querySelector('button[type="submit"]');
+  const history=[];
+  let busy=false;
+  function toggle(open){
+    panel.classList.toggle('open',open);
+    launch.setAttribute('aria-expanded',String(open));
+    if(open)input.focus();else launch.focus();
+  }
+  launch.onclick=()=>toggle(!panel.classList.contains('open'));
+  close.onclick=()=>toggle(false);
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'&&panel.classList.contains('open'))toggle(false);
+  });
+  function bubble(text,kind){
+    const node=document.createElement('div');
+    node.className='bubble '+kind;
+    node.textContent=text;
+    log.appendChild(node);
+    log.scrollTop=log.scrollHeight;
+    return node;
+  }
+  async function ask(question){
+    question=question.trim();
+    if(!question||busy)return;
+    busy=true;submit.disabled=true;input.disabled=true;
+    bubble(question,'user');
+    const pending=bubble('The Curator is thinking…','bot');
+    const controller=new AbortController();
+    const timeout=setTimeout(()=>controller.abort(),30000);
+    try{
+      // Keep at most 12 messages, including the latest user question.
+      const messages=[...history,{role:'user',content:question}].slice(-12);
+      const response=await fetch(API,{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({messages}),signal:controller.signal
+      });
+      const data=await response.json().catch(()=>({}));
+      if(!response.ok||typeof data.answer!=='string'||!data.answer.trim()){
+        throw new Error(response.status===429?'The Curator is receiving too many requests. Please try again later.':'The Curator is temporarily unavailable. Please try again shortly.');
+      }
+      pending.textContent=data.answer;
+      history.push({role:'user',content:question},{role:'assistant',content:data.answer});
+      if(history.length>11)history.splice(0,history.length-11);
+    }catch(error){
+      pending.textContent=error.name==='AbortError'?'The request timed out. Please try again.':error.message;
+    }finally{
+      clearTimeout(timeout);busy=false;submit.disabled=false;input.disabled=false;
+      log.scrollTop=log.scrollHeight;input.focus();
+    }
+  }
+  form.addEventListener('submit',e=>{
+    e.preventDefault();const question=input.value;input.value='';ask(question);
+  });
+  document.querySelectorAll('[data-question]').forEach(button=>{
+    button.addEventListener('click',()=>ask(button.dataset.question));
+  });
+})();
 </script></body></html>
