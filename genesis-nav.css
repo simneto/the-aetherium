@@ -1,0 +1,9 @@
+/* Genesis navigation: consistent spacing and responsive wrapping */
+.genesis-nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 12px;min-width:0;max-width:100%}
+.genesis-nav a{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:7px 11px;border:1px solid transparent;border-radius:7px;text-decoration:none;color:#c7dfdf;font:500 13px/1.35 system-ui,-apple-system,sans-serif;white-space:nowrap;letter-spacing:0}
+.genesis-nav a:hover,.genesis-nav a:focus-visible{background:#203849;border-color:#557282;color:#fff}
+.genesis-nav a[aria-current="page"]{background:#213846;border-color:#688a92;color:#f1e0ba}
+header:has(.genesis-nav){display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px 24px}
+header:has(.genesis-nav) .brand{flex-shrink:0}
+@media(max-width:960px){.genesis-nav{justify-content:flex-start;width:100%;gap:7px 9px}.genesis-nav a{padding:8px 10px}}
+@media(max-width:520px){.genesis-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.genesis-nav a{white-space:normal;text-align:center;min-height:44px;padding:8px 6px}}

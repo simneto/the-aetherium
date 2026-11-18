@@ -1,0 +1,398 @@
+[
+  {
+    "id": "AST-001",
+    "title": "The Observable Universe",
+    "classification": "Science",
+    "division": "Cosmology & Astronomy",
+    "summary": "The observable universe is the region from which light or other signals have had time to reach us. Its boundary is not necessarily an edge of the entire universe.",
+    "notes": "Cosmic horizons describe limits of observation, not a known physical wall.",
+    "related": [
+      "AST-002",
+      "THE-001"
+    ],
+    "source": "https://science.nasa.gov/universe/",
+    "detail": "The observable universe is defined by the finite age of the cosmos and the finite speed at which information travels. Because space has expanded while ancient light traveled, the present-day distance to the most distant observable regions is much larger than the universe's age expressed in light-years. Observability is a property of our location and cosmic history, not evidence for a literal wall.",
+    "evidence": "The cosmic microwave background offers a view of the early universe after it became transparent to light. Astronomers also map galaxies at different redshifts to study cosmic history.",
+    "question": "Why do we observe only part of the universe, and what assumptions are needed to infer conditions beyond our horizon?",
+    "connections": [
+      {
+        "id": "AST-002",
+        "reason": "Expansion changes how cosmological distances and horizons are interpreted."
+      },
+      {
+        "id": "THE-001",
+        "reason": "Questions about the universe's earliest regimes motivate quantum-gravity research."
+      }
+    ]
+  },
+  {
+    "id": "AST-002",
+    "title": "Cosmic Expansion",
+    "classification": "Science",
+    "division": "Cosmology & Astronomy",
+    "summary": "Measurements show that large-scale distances between unbound galaxies generally increase over cosmic time. Expansion is described by cosmological models of spacetime.",
+    "notes": "Redshift and other observations help constrain the history of expansion.",
+    "related": [
+      "AST-001",
+      "THE-002"
+    ],
+    "source": "https://science.nasa.gov/universe/",
+    "detail": "Cosmic expansion describes the change in large-scale distances between galaxies that are not gravitationally bound. Redshift, the cosmic microwave background, and other observations constrain expansion models. Expansion does not mean atoms or the Solar System steadily grow: local forces dominate at those scales.",
+    "evidence": "Measurements of distant supernovae and large-scale cosmic structure help reconstruct how the expansion rate changed over time.",
+    "question": "What physical mechanism explains the observed late-time acceleration?",
+    "connections": [
+      {
+        "id": "THE-002",
+        "reason": "The observed expansion history motivates dark-energy models."
+      },
+      {
+        "id": "AST-001",
+        "reason": "The expansion history shapes the observable cosmic horizon."
+      }
+    ]
+  },
+  {
+    "id": "AST-003",
+    "title": "Gravitational Waves",
+    "classification": "Science",
+    "division": "Cosmology & Astronomy",
+    "summary": "Accelerating masses can produce ripples in spacetime. Gravitational-wave detectors have measured signals from compact-object mergers.",
+    "notes": "Waveform predictions from general relativity can be compared with detector data.",
+    "related": [
+      "PHY-001",
+      "AET-001"
+    ],
+    "source": "https://www.ligo.caltech.edu/page/what-are-gw",
+    "detail": "General relativity predicts that accelerating distributions of mass can generate gravitational waves, which carry energy across spacetime. Laser interferometers detect extraordinarily small relative changes in distance. Signals from merging black holes and neutron stars provide tests of gravity in extreme conditions.",
+    "evidence": "Researchers compare recorded detector strain with predicted waveforms and seek agreement between independent instruments.",
+    "question": "Which observed features could distinguish an astrophysical signal from instrumental noise?",
+    "connections": [
+      {
+        "id": "PHY-001",
+        "reason": "Gravitational waves are a prediction of general relativity."
+      },
+      {
+        "id": "AET-001",
+        "reason": "Fictional parallel: the anomaly's signal is compared with real signal-detection methods, not claimed to be a gravitational wave."
+      }
+    ]
+  },
+  {
+    "id": "PHY-001",
+    "title": "General Relativity",
+    "classification": "Science",
+    "division": "Fundamental Physics",
+    "summary": "Einstein’s general relativity models gravitation through the geometry of spacetime. It has passed numerous observational tests.",
+    "notes": "The theory predicts gravitational waves and effects such as gravitational time dilation.",
+    "related": [
+      "AST-003",
+      "THE-001"
+    ],
+    "source": "https://einstein.stanford.edu/",
+    "detail": "General relativity represents gravity as spacetime curvature associated with energy and momentum. Free-falling objects follow paths through this geometry. The theory explains effects including gravitational time dilation, light deflection, and orbital precession, and it predicts gravitational waves.",
+    "evidence": "Clock comparisons, gravitational lensing observations, and gravitational-wave detections test predictions in different regimes.",
+    "question": "Where do general relativity and quantum mechanics demand a deeper common framework?",
+    "connections": [
+      {
+        "id": "AST-003",
+        "reason": "Wave detections test predictions of curved spacetime."
+      },
+      {
+        "id": "THE-001",
+        "reason": "Quantum gravity seeks a deeper framework for regimes beyond current theories."
+      }
+    ]
+  },
+  {
+    "id": "PHY-002",
+    "title": "Quantum Mechanics",
+    "classification": "Science",
+    "division": "Fundamental Physics",
+    "summary": "Quantum mechanics predicts measurement outcomes for microscopic systems using mathematical states and probabilities.",
+    "notes": "Its predictions are experimentally successful, even as interpretations remain debated.",
+    "related": [
+      "THE-001",
+      "PHY-003"
+    ],
+    "source": "https://www.nobelprize.org/prizes/physics/2022/summary/",
+    "detail": "Quantum mechanics uses mathematical states to calculate probabilities for measurement outcomes. Superposition and interference are central features; entanglement describes correlations that cannot be reproduced by certain classical models. The theory's predictive success does not settle every philosophical question about measurement.",
+    "evidence": "Interference experiments and tests of Bell inequalities probe distinct quantum predictions.",
+    "question": "How should a quantum description of matter relate to the dynamical geometry of spacetime?",
+    "connections": [
+      {
+        "id": "THE-001",
+        "reason": "A complete quantum account of gravity remains unresolved."
+      },
+      {
+        "id": "PHY-003",
+        "reason": "Quantum field theories underpin the Standard Model."
+      }
+    ]
+  },
+  {
+    "id": "PHY-003",
+    "title": "The Fundamental Interactions",
+    "classification": "Science",
+    "division": "Fundamental Physics",
+    "summary": "Gravity, electromagnetism, and the strong and weak nuclear interactions describe the known fundamental interactions.",
+    "notes": "The Standard Model describes three of these interactions but does not provide a quantum theory of gravity.",
+    "related": [
+      "PHY-002",
+      "THE-001"
+    ],
+    "source": "https://home.cern/science/physics/standard-model",
+    "detail": "Four fundamental interactions are recognized: gravitation, electromagnetism, the strong interaction, and the weak interaction. The Standard Model provides a quantum framework for electromagnetic, weak, and strong processes, while gravity is described separately by general relativity.",
+    "evidence": "Particle collisions, decay rates, and precision measurements test Standard Model predictions.",
+    "question": "What new evidence would indicate physics beyond the Standard Model?",
+    "connections": [
+      {
+        "id": "PHY-002",
+        "reason": "The Standard Model is formulated using quantum theory."
+      },
+      {
+        "id": "THE-001",
+        "reason": "Gravity remains outside the Standard Model's quantum description."
+      }
+    ]
+  },
+  {
+    "id": "BIO-001",
+    "title": "Evolution by Natural Selection",
+    "classification": "Science",
+    "division": "Life & Consciousness",
+    "summary": "Heritable variation and differences in reproductive success can change the traits of populations over generations.",
+    "notes": "Evolutionary biology combines evidence from genetics, fossils, and observed populations.",
+    "related": [
+      "BIO-002",
+      "MTH-001"
+    ],
+    "source": "https://evolution.berkeley.edu/",
+    "detail": "Evolution by natural selection occurs when heritable differences influence survival or reproduction in a given environment. Mutation, genetic drift, migration, and selection all contribute to evolutionary change. Evolution does not imply a predetermined direction toward complexity.",
+    "evidence": "Genetic comparisons, fossil sequences, and observed changes in populations provide complementary evidence.",
+    "question": "Under what conditions do cooperation and increasingly complex organization evolve?",
+    "connections": [
+      {
+        "id": "BIO-002",
+        "reason": "Evolution can generate complex organization without a predetermined goal."
+      },
+      {
+        "id": "MTH-001",
+        "reason": "Ecological and evolutionary relationships can be modeled as networks."
+      }
+    ]
+  },
+  {
+    "id": "BIO-002",
+    "title": "Emergent Complexity",
+    "classification": "Science",
+    "division": "Life & Consciousness",
+    "summary": "Interactions among simpler components can give rise to collective behavior that is useful to describe at higher levels.",
+    "notes": "Emergence is a framework for studying complex systems, not evidence that physical laws have been suspended.",
+    "related": [
+      "BIO-001",
+      "MTH-001"
+    ],
+    "source": "https://www.santafe.edu/",
+    "detail": "Emergence describes collective behavior that becomes useful to explain at the level of systems rather than individual parts. Examples include flocking, ecological networks, and collective computation. Emergent behavior can be compatible with known physical laws; it is not itself proof of unknown forces.",
+    "evidence": "Models compare simple interaction rules with larger-scale patterns, checking which properties persist when conditions change.",
+    "question": "When is a higher-level description more predictive than tracking every component?",
+    "connections": [
+      {
+        "id": "MTH-001",
+        "reason": "Networks help describe interactions that yield collective behavior."
+      },
+      {
+        "id": "BIO-001",
+        "reason": "Selection and other evolutionary processes shape complex living systems."
+      }
+    ]
+  },
+  {
+    "id": "MTH-001",
+    "title": "Networks and Systems",
+    "classification": "Science",
+    "division": "Mathematics & Systems",
+    "summary": "Network models represent interacting components as nodes and connections, helping researchers study structure and dynamics.",
+    "notes": "Applications include ecology, epidemiology, infrastructure, and information systems.",
+    "related": [
+      "BIO-002",
+      "THE-002"
+    ],
+    "source": "https://www.santafe.edu/",
+    "detail": "Networks represent entities as nodes and relationships as edges. The pattern of connections can influence how information, disease, energy, or influence spreads. Different network models capture different assumptions; a useful model must be checked against real data.",
+    "evidence": "Researchers compare degree distributions, connectivity, and diffusion dynamics across networks.",
+    "question": "Can apparently unrelated systems share a mathematical structure without sharing a physical cause?",
+    "connections": [
+      {
+        "id": "BIO-002",
+        "reason": "Network topology affects emergent behavior."
+      },
+      {
+        "id": "AET-003",
+        "reason": "Fictional parallel: investigators compare patterns across records without assuming a common cause."
+      }
+    ]
+  },
+  {
+    "id": "THE-001",
+    "title": "The Search for Quantum Gravity",
+    "classification": "Speculation",
+    "division": "Fundamental Physics",
+    "summary": "Physicists seek a framework that reconciles quantum principles with dynamical spacetime. No experimentally confirmed complete theory is established.",
+    "notes": "Different approaches propose distinct mathematical structures; evidence is required to distinguish them.",
+    "related": [
+      "PHY-001",
+      "PHY-002",
+      "PHY-003"
+    ],
+    "source": "",
+    "detail": "Quantum gravity is the broad research problem of describing gravity consistently in regimes where quantum effects matter. Candidate approaches include string theory and loop quantum gravity, among others. None is established as an experimentally confirmed complete account of nature.",
+    "evidence": "Proposals are assessed for mathematical consistency and for whether they yield testable predictions.",
+    "question": "Which observations could distinguish competing approaches rather than merely accommodate them?",
+    "connections": [
+      {
+        "id": "PHY-001",
+        "reason": "Relativity describes gravity classically."
+      },
+      {
+        "id": "PHY-002",
+        "reason": "Quantum mechanics describes microscopic phenomena."
+      }
+    ]
+  },
+  {
+    "id": "THE-002",
+    "title": "The Nature of Dark Energy",
+    "classification": "Speculation",
+    "division": "Cosmology & Astronomy",
+    "summary": "Cosmological observations motivate models involving dark energy, but its underlying physical nature remains unresolved.",
+    "notes": "A cosmological constant is one explanation; alternatives remain subjects of research.",
+    "related": [
+      "AST-002",
+      "AST-001"
+    ],
+    "source": "https://science.nasa.gov/dark-energy/",
+    "detail": "Dark energy is a name for the component or effect invoked in models of the observed accelerated cosmic expansion. A cosmological constant is one possibility; dynamical fields and modified-gravity explanations are also studied. The underlying cause has not been established.",
+    "evidence": "Cosmic surveys, supernova measurements, and other probes constrain the expansion history.",
+    "question": "Does acceleration reflect a constant property of spacetime or something that changes?",
+    "connections": [
+      {
+        "id": "AST-002",
+        "reason": "Acceleration measurements constrain dark-energy explanations."
+      },
+      {
+        "id": "AST-001",
+        "reason": "Cosmic history and horizons are linked."
+      }
+    ]
+  },
+  {
+    "id": "THE-003",
+    "title": "Life Beyond Earth",
+    "classification": "Speculation",
+    "division": "Life & Consciousness",
+    "summary": "Whether life exists beyond Earth is an open empirical question. Habitability studies and biosignature searches can test particular possibilities.",
+    "notes": "A plausible environment is not proof that life exists there.",
+    "related": [
+      "AST-001",
+      "BIO-001"
+    ],
+    "source": "https://science.nasa.gov/astrobiology/",
+    "detail": "The search for life beyond Earth investigates potentially habitable environments, chemical pathways, and possible biosignatures. No confirmed detection of extraterrestrial life has been established. A candidate biosignature must be evaluated against nonbiological explanations.",
+    "evidence": "Planetary missions, atmospheric spectroscopy, and laboratory studies help test hypotheses about habitability.",
+    "question": "What combination of independent observations would justify a claim of life?",
+    "connections": [
+      {
+        "id": "BIO-001",
+        "reason": "Evolution provides a framework for life after it emerges."
+      },
+      {
+        "id": "AST-001",
+        "reason": "Astronomy supplies the environments and scales for the search."
+      }
+    ]
+  },
+  {
+    "id": "AET-001",
+    "title": "The First Anomaly",
+    "classification": "Canon",
+    "division": "Anomalous Research",
+    "summary": "FICTIONAL RECORD: An Aetherium observatory logged a repeating signal whose origin remained unresolved after preliminary checks.",
+    "notes": "The record establishes a mystery, not a real astronomical detection. Its purported evidence exists only within the fictional setting.",
+    "related": [
+      "AST-003",
+      "AET-002",
+      "AET-003"
+    ],
+    "source": "",
+    "detail": "FICTIONAL CANON. The Aetherium's early observatory logged a structured repeating signal during a routine calibration sequence. Independent reviews disagreed on whether the pattern originated in the sky, in the instrument, or in a data-processing artifact. The original team refused to classify it as an extraordinary discovery.",
+    "evidence": "In-universe evidence: a timestamped receiver log, a calibration notebook, and a later comparative analysis. These are fictional story artifacts, not real observations.",
+    "question": "Why does the signal's internal timing resemble a later laboratory waveform?",
+    "connections": [
+      {
+        "id": "AST-003",
+        "reason": "Signal analysis provides a real scientific analogy; the anomaly itself is fictional."
+      },
+      {
+        "id": "AET-003",
+        "reason": "A later fictional audit found discrepancies in the original logs."
+      },
+      {
+        "id": "AET-002",
+        "reason": "The unexplained observation influenced the fictional institution's founding."
+      }
+    ]
+  },
+  {
+    "id": "AET-002",
+    "title": "The Founding Memorandum",
+    "classification": "Canon",
+    "division": "Anomalous Research",
+    "summary": "FICTIONAL RECORD: A coalition of researchers founded The Aetherium to investigate unusual observations without abandoning scientific standards.",
+    "notes": "The memorandum states the institution’s principle: understanding is never finished.",
+    "related": [
+      "AET-001",
+      "AET-003"
+    ],
+    "source": "",
+    "detail": "FICTIONAL CANON. The institution was formed after separate teams reported puzzling but unverified observations. Its founders established a rule: unexplained does not mean supernatural, and a beautiful theory does not outweigh a failed replication. The Archives were created to preserve both results and uncertainty.",
+    "evidence": "In-universe evidence: founding memorandum, research charter, and records of the first interdepartmental review.",
+    "question": "Who insisted that the anomalous records remain accessible rather than sealed?",
+    "connections": [
+      {
+        "id": "AET-001",
+        "reason": "The anomaly was one of several unresolved reports discussed by the founders."
+      },
+      {
+        "id": "AET-003",
+        "reason": "The audit challenges the reliability of the earliest records."
+      }
+    ]
+  },
+  {
+    "id": "AET-003",
+    "title": "The Missing Interval",
+    "classification": "Canon",
+    "division": "Anomalous Research",
+    "summary": "FICTIONAL RECORD: A later audit discovered a discrepancy between two observation logs associated with the First Anomaly.",
+    "notes": "The discrepancy might be clerical, instrumental, or something stranger. The archive does not yet provide an answer.",
+    "related": [
+      "AET-001",
+      "AET-002"
+    ],
+    "source": "",
+    "detail": "FICTIONAL CANON. During a retrospective audit, two archived copies of the First Anomaly's observation log appeared to disagree about a short interval. The difference could reflect a clock correction, file corruption, or a transcription mistake. An internal note hints at a connection to a later experiment, but provides no proof.",
+    "evidence": "In-universe evidence: two conflicting log copies and an unsigned audit note. The discrepancy is an intentionally unresolved story element.",
+    "question": "What, if anything, was recorded during the missing interval?",
+    "connections": [
+      {
+        "id": "AET-001",
+        "reason": "The disputed interval belongs to the First Anomaly's fictional data."
+      },
+      {
+        "id": "MTH-001",
+        "reason": "A mathematical resemblance is a narrative clue, not scientific evidence."
+      }
+    ]
+  }
+]
